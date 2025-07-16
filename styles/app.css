@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light dark;
+  font-size: 16px;
+
+  --pattern-bg-mobile-light: url(../assets/images/pattern-background-mobile-light.svg);
+  --pattern-bg-mobile-dark: url(../assets/images/pattern-background-mobile-dark.svg);
+  --pattern-bg-tablet-light: url(../assets/images/pattern-background-tablet-light.svg);
+  --pattern-bg-tablet-dark: url(../assets/images/pattern-background-tablet-dark.svg);
+  --pattern-bg-desktop-light: url(../assets/images/pattern-background-desktop-light.svg);
+  --pattern-bg-desktop-dark: url(../assets/images/pattern-background-desktop-dark.svg);
+
+  /* colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-grey-500: #626c7f;
+  --color-grey-50: #f4f6fa;
+
+  --color-blue-950: #2d3949;
+  --color-blue-900: #313e51;
+  --color-blue-850: #3b4d66;
+  --color-blue-500: #306aff;
+  --color-blue-300: #abc1e1;
+  --color-blue-100: #edf1f9;
+  --color-blue-50: #ebf0ff;
+
+  --color-green-500: #2fd887;
+  --color-green-100: #e0fdef;
+
+  --color-purple-400: #a729f5;
+  --color-purple-100: #f6e7ff;
+
+  --color-orange-400: #ff7e35;
+  --color-orange-50: #fff5ed;
+
+  --color-red-500: #ee5454;
+
+  --bg-pattern: var(--pattern-bg-mobile-light);
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+button {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  background-image: var(--bg-pattern);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: light-dark(var(--color-grey-50), var(--color-blue-900));
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+main {
+  display: block;
+}
+
+.light {
+  color-scheme: light;
+  --bg-pattern: var(--pattern-bg-mobile-light);
+}
+
+.dark {
+  color-scheme: dark;
+  --bg-pattern: var(--pattern-bg-mobile-dark);
+}

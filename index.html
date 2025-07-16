@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+
+    <title>Frontend Mentor | Frontend quiz app</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="subject-container"></div>
+        <div class="theme-switcher-container"></div>
+      </header>
+      <main>
+        <div class="menu-container">
+          <!-- Quiz menu start -->
+          <header class="welcome-container">
+            <h2>Welcome to the</h2>
+            <h1>Frontend Quiz!</h1>
+            <p>Pick a subject to get started.</p>
+          </header>
+          <ul class="subjects-list">
+            <li class="subject">HTML</li>
+            <li class="subject">CSS</li>
+            <li class="subject">JavaScript</li>
+            <li class="subject">Accessibility</li>
+          </ul>
+          <!-- Quiz menu end -->
+        </div>
+
+        <div class="quiz-container">
+          <div class="question-container">
+            <!-- Quiz question start -->
+            <p>
+              Question
+              <!-- number -->
+              <span class="question-num"></span>
+              of 10
+            </p>
+          </div>
+          <div class="answer-container">
+            <ul class="choices-container">
+              <li>A</li>
+              <li>B</li>
+              <li>C</li>
+              <li>D</li>
+            </ul>
+            <button>Submit answer</button>
+            <!-- Quiz question end -->
+          </div>
+        </div>
+        <div class="quiz-end-container">
+          <!-- Quiz completed start -->
+          <header>
+            <h2>Quiz completed</h2>
+            <h1>You scored...</h1>
+          </header>
+          <div class="results-container">
+            <div class="subject-container"></div>
+            <div class="score-container">
+              <!-- score -->
+              <p class="score"></p>
+              <p class="total-text">out of 10</p>
+            </div>
+            <button>Play Again</button>
+          </div>
+          <!-- Quiz completed end -->
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
