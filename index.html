@@ -17,71 +17,78 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="stylesheet" href="./styles/quiz.css" />
 
     <title>Frontend Mentor | Frontend quiz app</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <div class="subject-container"></div>
-        <div class="theme-switcher-container"></div>
+        <div class="current-subject-container"></div>
+        <div class="theme-container">
+          <span class="icon-sun"></span>
+          <label class="toggle-container">
+            <input id="theme-checkbox" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+          <span class="icon-moon"></span>
+        </div>
       </header>
       <main>
-        <div class="menu-container">
-          <!-- Quiz menu start -->
+        <div class="menu-container show-container">
           <header class="welcome-container">
             <h2>Welcome to the</h2>
             <h1>Frontend Quiz!</h1>
-            <p>Pick a subject to get started.</p>
+            <h3 class="subtitle">Pick a subject to get started.</h3>
           </header>
-          <ul class="subjects-list">
-            <li class="subject">HTML</li>
-            <li class="subject">CSS</li>
-            <li class="subject">JavaScript</li>
-            <li class="subject">Accessibility</li>
-          </ul>
-          <!-- Quiz menu end -->
+          <ul class="subjects-container"></ul>
         </div>
 
         <div class="quiz-container">
           <div class="question-container">
-            <!-- Quiz question start -->
-            <p>
+            <h3 class="question-counter">
               Question
-              <!-- number -->
               <span class="question-num"></span>
-              of 10
-            </p>
+              of <span class="total-questions-num"></span>
+            </h3>
+            <p class="question-text"></p>
+            <div class="progress-bar"></div>
           </div>
           <div class="answer-container">
-            <ul class="choices-container">
-              <li>A</li>
-              <li>B</li>
-              <li>C</li>
-              <li>D</li>
-            </ul>
-            <button>Submit answer</button>
-            <!-- Quiz question end -->
+            <ul class="choices-container"></ul>
+            <button type="button" class="quiz-btn submit-answer-btn">
+              Submit Answer
+            </button>
+            <div class="error-msg">
+              <img src="./assets/images/icon-error.svg" alt="error-icon" /><span
+                >Please select an answer</span
+              >
+            </div>
           </div>
         </div>
+
         <div class="quiz-end-container">
-          <!-- Quiz completed start -->
           <header>
             <h2>Quiz completed</h2>
             <h1>You scored...</h1>
           </header>
-          <div class="results-container">
-            <div class="subject-container"></div>
-            <div class="score-container">
-              <!-- score -->
-              <p class="score"></p>
-              <p class="total-text">out of 10</p>
+          <div class="quiz-end-content">
+            <div class="results-container">
+              <div class="current-subject-container"></div>
+              <div class="score-container">
+                <p class="final-score"></p>
+                <p class="total-text">
+                  out of <span class="total-questions-num">10</span>
+                </p>
+              </div>
             </div>
-            <button>Play Again</button>
+            <button type="button" class="quiz-btn play-again-btn">
+              Play Again
+            </button>
           </div>
-          <!-- Quiz completed end -->
         </div>
       </main>
     </div>
   </body>
+  <script src="./scripts/app.js"></script>
 </html>
