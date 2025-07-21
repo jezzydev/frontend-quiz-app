@@ -77,6 +77,7 @@ body {
 body,
 h1,
 h2,
+h3,
 p,
 ul,
 li {
@@ -135,6 +136,8 @@ h3 {
 }
 
 .container {
+  margin: 0 auto;
+  max-width: 1440px;
   padding: 0 24px 87px;
 }
 
@@ -201,6 +204,8 @@ h3 {
   border-radius: 999px;
   padding: 4px;
   background-color: var(--color-purple-600);
+  --width: 12px;
+  --height: 12px;
 }
 
 .slider::before {
@@ -209,11 +214,64 @@ h3 {
   border: none;
   border-radius: 999px;
   background-color: var(--color-white);
-  width: 12px;
-  height: 12px;
+  width: var(--width);
+  height: var(--height);
   transition: 0.3s;
 }
 
 #theme-checkbox:checked + .slider::before {
   transform: translateX(100%);
+}
+
+@media screen and (min-width: 768px) {
+  h1,
+  h2 {
+    font-size: 4rem; /* 64px */
+  }
+
+  h3 {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .container {
+    padding: 0 64px 225px;
+  }
+
+  .container > header {
+    padding: 54px 0;
+  }
+
+  .theme-container {
+    width: 128px;
+    height: 28px;
+    gap: 16px;
+  }
+
+  .icon-sun,
+  .icon-moon {
+    width: 24px;
+    height: 24px;
+    background-size: 21px;
+  }
+
+  .toggle-container {
+    width: 48px;
+    height: 28px;
+    cursor: pointer;
+  }
+
+  .slider {
+    --width: 20px;
+    --height: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 0 140px 150px;
+  }
+
+  .container > header {
+    padding: 98px 0;
+  }
 }

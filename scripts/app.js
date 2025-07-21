@@ -4,6 +4,7 @@ const main = document.querySelector('main');
 const menuContainer = document.querySelector('.menu-container');
 const quizContainer = document.querySelector('.quiz-container');
 const quizEndContainer = document.querySelector('.quiz-end-container');
+const currentSubjectContainers = document.querySelectorAll('.current-subject-container');
 const questionNum = document.querySelector('.question-num');
 const allTotalQuestionsNum = document.querySelectorAll('.total-questions-num');
 const questionText = document.querySelector('.question-text');
@@ -54,12 +55,14 @@ themeCheckbox.addEventListener('change', function () {
 });
 
 playAgainBtn.addEventListener('click', function () {
+    this.blur();
     quizEndContainer.classList.remove(showContainerClassName);
     menuContainer.classList.add(showContainerClassName);
     resetValues();
 });
 
 submitAnswerBtn.addEventListener('click', function () {
+    this.blur();
     if (answered) {
         if (currentQuestionIndex + 1 < selectedSubject.questions.length) {
             prepareForNextQuestion();
@@ -169,8 +172,6 @@ function updateTotalQuestions(total) {
 }
 
 function updateCurrentSubjectContainers(selectedSubjectBtn) {
-    const currentSubjectContainers = document.querySelectorAll('.current-subject-container');
-
     currentSubjectContainers.forEach(container => {
         const iconContainer = selectedSubjectBtn.querySelector('.subject-icon-container').cloneNode(true);
         const title = selectedSubjectBtn.querySelector('.subject-title').cloneNode(true);
@@ -254,7 +255,6 @@ function loadQuestion(subject, questionIndex) {
 
 function endGame() {
     quizContainer.classList.remove(showContainerClassName);
-
     quizEndContainer.classList.add(showContainerClassName);
     const finalScore = document.querySelector('.final-score');
     finalScore.innerText = score;
@@ -271,4 +271,7 @@ function resetValues() {
     score = 0;
     submitAnswerBtn.innerText = submitAnswerDefaultText;
     answered = false;
+    currentSubjectContainers.forEach(function (cont) {
+        cont.innerHTML = ""
+    });
 }
