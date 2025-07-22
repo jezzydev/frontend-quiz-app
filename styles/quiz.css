@@ -42,7 +42,7 @@ main .show-container {
 .choice-btn {
   width: 100%;
   min-width: 327px;
-  height: 72px;
+  min-height: 72px;
   padding: 16px;
   outline: none;
   border: 3px solid transparent;
@@ -304,7 +304,7 @@ main .show-container {
 
   .subject-btn,
   .choice-btn {
-    height: 88px;
+    min-height: 88px;
     gap: 32px;
   }
 
@@ -404,7 +404,7 @@ main .show-container {
 
   .subject-btn,
   .choice-btn {
-    height: 104px;
+    min-height: 104px;
     gap: 32px;
     padding: 24px;
   }
